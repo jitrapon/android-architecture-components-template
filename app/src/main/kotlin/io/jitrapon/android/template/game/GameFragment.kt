@@ -74,6 +74,9 @@ class GameFragment : BaseFragment(), GameContract.View {
                     super.onScrollStateChanged(recyclerView, newState)
 
                     if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                        if (!viewModel.isLoggedIn()) {
+                            cardRecyclerView.smoothScrollToPosition(0)
+                        }
                         viewModel.onCardScrolledToPosition(cardSnapHelper.getSnapPosition())
                     }
                 }
@@ -98,7 +101,6 @@ class GameFragment : BaseFragment(), GameContract.View {
                             title = getString(R.string.game_fb_dialog_title),
                             message = getString(R.string.game_fb_dialog_message),
                             onCancel = {
-                                cardRecyclerView.smoothScrollToPosition(0)
                                 loginDialog = null
                             },
                             positiveOptionText = getString(R.string.game_fb_dialog_button),

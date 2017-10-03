@@ -67,6 +67,10 @@ class GameViewModel(context: Application) :
         }
     }
 
+    fun isLoggedIn(): Boolean {
+        return isLoggedIn
+    }
+
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     override fun greetUser() {
         message.value = getString(R.string.game_greeting_message)
