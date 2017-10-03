@@ -1,0 +1,13 @@
+<resources>
+    <string name="application_name">Template</string>
+    <string name="facebook_app_id">316185768790504</string>
+    <string name="fb_login_protocol_scheme">fb316185768790504</string>
+
+    <!-- Game Screen -->
+    <string name="game_greeting_message">Hello user, welcome to our game!</string>
+    <string name="game_fb_dialog_title">Login Required</string>
+    <string name="game_fb_dialog_message">Please log in using Facebook to continue</string>
+    <string name="game_fb_dialog_button">log in</string>
+    <string name="game_login_success_message">Login succeeded</string>
+    <string name="game_login_failure_message">Login failed</string>
+</resources>
